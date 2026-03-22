@@ -8,7 +8,7 @@ st.set_page_config(page_title="CodeCraft", page_icon="🤖", layout="wide")
 
 # --- Hugging Face Inference API configuration ---
 HF_API_TOKEN = st.secrets.get("hf_api_token", "") or os.getenv("HF_API_TOKEN")  # You must set this in Streamlit Community sharing secrets.
-HF_API_URL = "https://api-inference.huggingface.co/models/bigcode/starcoderbase"
+HF_API_URL = "https://router.huggingface.co/models/bigcode/starcoderbase"
 
 def hf_generate_completion(system_prompt, user_prompt, temperature=0.3, max_tokens=512):
     """Query the Hugging Face text-generation inference endpoint via API."""
